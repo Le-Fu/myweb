@@ -1,1 +1,13 @@
-
+/*----------banner-css---------------*/
+#banner-content{
+    float: left;
+    padding: 9rem 0 0;
+    width: 46%;
+}
+#tv{
+    float: right;
+    width: 50%;
+}
+#tv img{
+    width: 100%;
+}

@@ -17,37 +17,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/jquery-1.11.1.min.js" ></script>
+    <script src="js/require.js" data-main="js/index" ></script>
 </head>
 <body>
-    <div id="header">
+    <?php include 'header.php'?>
+    <div id="banner">
         <div class="wrapper">
-            <div class="logo">
-                <h1><a href=""><img src="img/logo.png" alt=""></a></h1>
+            <div id="banner-content">
+                <h1>Creative Ideas Live Here</h1>
+                <p>Aliquam suscipit vel nulla quis eleifend. Maecenas vitae tristique ante. Sed sit amet vehicula libero.</p>
             </div>
-
-            <div id="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <div id="search">
-                    <form action="">
-                        <input type="search" placeholder="Enter your search term...">
-                        <input type="submit" class="search-submit">
-                        <span></span>
-                        <!--                        <button type="submit"><img src="img/search.png" alt=""></button>-->
-                    </form>
-
-                </div>
-            </div>
-            <div class="clearfix"> </div>
+            <div id="tv"><img src="img/tv.png" alt=""></div>
+            <div class="clearfix"></div>
         </div>
     </div>
-    <div id="banner"></div>
     <div id="service"></div>
     <div id="meet"></div>
     <div id="footer"></div>
