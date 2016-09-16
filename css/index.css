@@ -1,8 +1,11 @@
 /*----------banner-css---------------*/
+#banner{
+    margin-top: 2rem;
+}
 #banner-content{
     float: left;
-    padding: 9rem 0 0;
-    width: 46%;
+    padding: 12rem 0 0;
+    width: 30%;
 }
 #tv{
     float: right;
@@ -10,4 +13,8 @@
 }
 #tv img{
     width: 100%;
+}
+/*------------works-css-------------------*/
+#works{
+    margin-top: 2rem;
 }

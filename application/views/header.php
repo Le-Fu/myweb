@@ -22,7 +22,7 @@
             </ul>
             <a href="" class="close toggle-btn">&#xd7;</a>
         </div>
-
+        <hr>
 <!--        <div class="clearfix"> </div>-->
     </div>
 </div>

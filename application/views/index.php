@@ -29,7 +29,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div id="tv"><img src="img/tv.png" alt=""></div>
             <div class="clearfix"></div>
+            <hr>
         </div>
+    </div>
+    <div id="works">
+
     </div>
     <div id="service"></div>
     <div id="meet"></div>
