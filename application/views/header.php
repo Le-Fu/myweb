@@ -6,8 +6,8 @@
         </div>
 
         <div id="nav">
-            <a href="#menu" class="open toggle-btn">&#8801;</a>
-            <ul id="menu">
+            <a href="#nav" class="open toggle-btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Portfolio</a></li>
@@ -20,7 +20,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="" class="close toggle-btn">&#xd7;</a>
+            <a href="" class="close toggle-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
         <hr>
 <!--        <div class="clearfix"> </div>-->

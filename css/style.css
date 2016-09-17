@@ -147,6 +147,7 @@ body{
 /*---------nav-css---------*/
     #nav{
         /*float: none;*/
+        z-index: 9;
         width: 100%;
         background-color: #000;
     }
@@ -173,21 +174,21 @@ body{
     }
     #nav .toggle-btn{
         position: absolute;
-        font-size: 4rem;
-        color: white;
-        background-color: #000;
-        padding: 0 0.2rem;
+        font-size: 3rem;
         right: 2rem;
-        top: 2rem;
+        top: -2rem;
         display: none;
     }
-    #menu{
+    #nav .menu {
         display: none;
     }
     #nav .open{
         display: block;
     }
-    #menu:target {
+    #nav:target .menu{
+        display: block;
+    }
+    #nav:target .close{
         display: block;
     }
 
