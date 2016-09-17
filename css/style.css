@@ -13,15 +13,16 @@ img{
     border: 0;
 }
 /*----------common-css----------------*/
+html{
+    font-size: 10px;
+}
 .wrapper{
-    width: 1170px;
+    width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 .clearfix{
     clear: both;
-}
-html{
-    font-size: 10px;
 }
 body{
     background: #f4f4f4;
@@ -35,31 +36,30 @@ body{
 /*----------header-css------------------*/
 #header {
     margin-top: 4.4rem;
-    position: relative;
 }
 /*--------logo---------*/
 #header .logo{
     width: 20%;
+    padding-left:1rem;
     display: inline-block;
 }
 .logo a img{
     width: 100%;
-    display: block;
+    display: inline-block;
 }
 /*-------nav----------*/
 #nav {
-    width: 60%;
-    float: right;
+    position: absolute;
+    top:0;
+    right: 0;
 }
 #nav ul{
-    margin-top: 2.5rem;
     text-align: center;
 }
 
 #nav ul li {
-    float: left;
-    width: 16%;
     display: inline-block;
+    padding: 2rem;
 }
 
 #nav ul li a {
@@ -111,76 +111,83 @@ body{
     opacity: 1;
 }
 /*--------------search-css--------------*/
-#search{
-    margin-right: 3.5rem;
-    position: relative;
-}
 #search input{
-    position: absolute;
-    right:3.5rem;
-    display: none;
-    background-color: #279f7c;
-    border: 0;
+    width: 0;
     height: 2.2rem;
+    position: absolute;
+    right: 3.5rem;
+    border: 0;
     outline: none;
+    background-color: #279f7c;
 }
 
 #search  .search-btn{
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    background: url(../img/search.png) no-repeat 0 -4px;
-    display: inline-block;
     width: 3rem;
     height: 2.2rem;
+    position: absolute;
+    right: 0;
+    background: url(../img/search.png) no-repeat 0 -4px;
+    cursor: pointer;
 }
 
 .toggle-btn{
     display: none;
 }
 
-/*--------------nav-css-----------------*/
-@media (max-width: 767px) {
+@media (max-width: 959px) {
     .wrapper{
         width: 100%;
     }
+}
+/*--------------nav-css-----------------*/
+@media (max-width: 767px) {
+    #header {
+        margin-top:2rem;
+    }
 /*---------nav-css---------*/
     #nav{
-        /*float: none;*/
         z-index: 9;
         width: 100%;
         background-color: #000;
     }
 
     #nav ul li{
-        margin:0;
-        padding: 1rem 2rem;
-        width: 100%;
-        text-align: left;
+        text-align: center;
+        display: block;
+        padding: 1rem;
     }
 
     #nav ul li a{
         color: #fff;
     }
-    #search input{
+    #search {
+        width: 100%;
         display: inline-block;
-        border-radius: 9px;
-        height:3rem;
-        background-color: #000;
-        left: 4rem;
-    }
-    #search .search-btn{
         position: relative;
+    }
+
+    #search input{
+        top: -2.2rem;
+        width: 30%;
+        right: 35%;
+    }
+
+    #search .search-btn{
+        top: -2.2rem;
+        right: 30%;
+    }
+
+    #nav .menu {
+        display: none;
     }
     #nav .toggle-btn{
         position: absolute;
-        font-size: 3rem;
+        font-size: 2rem;
         right: 2rem;
-        top: -2rem;
-        display: none;
-    }
-    #nav .menu {
-        display: none;
+        top: 1rem;
+        color: #fff;
+        padding: 0 5px;
+        background-color: #000000;
     }
     #nav .open{
         display: block;
@@ -191,7 +198,19 @@ body{
     #nav:target .close{
         display: block;
     }
+    #nav:target .open{
+        display: none;
+    }
+}
 
+@media (max-width: 480px) {
+    #nav .toggle-btn {
+        top: 0.5rem;
+    }
+
+    #search .search-btn{
+        right: 26%;
+    }
 }
 
 
