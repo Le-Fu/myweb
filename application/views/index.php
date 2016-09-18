@@ -33,11 +33,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <hr>
         </div>
     </div>
-    <div id="works">
+    <div id="blog">
+        <div class="wrapper">
+            <div class="blog-top">
+                <h2>Latest Blogs</h2>
+                <ul class="blog-cate">
+                    <li><a href="" class="active">All</a></li>
+                    <?php
+                        foreach($categories as $category){
+                    ?>
+                            <li><a href=""><?php echo $category -> cate_name?></a></li>
+                    <?php
+                        }
+                    ?>
+                    <li><a href="blog.php">more..</a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
 
+            <ul class="blog-list">
+                <?php
+                    foreach ( $blogs as $blog) {
+                ?>
+                        <li class="blog-li">
+                            <a href="">
+                                <img src="<?php echo $blog -> img?>" alt="">
+                                <div class="mask">
+                                    <h3 class="blog-title"><?php echo $blog -> title?></h3>
+                                    <span class="view-more">view more</span>
+                                </div>
+                            </a>
+                        </li>
+                <?php
+                    }
+                ?>
+            </ul>
+        </div>
     </div>
     <div id="service"></div>
     <div id="meet"></div>
-    <div id="footer"></div>
+    <?php include 'footer.php'?>
 </body>
 </html>

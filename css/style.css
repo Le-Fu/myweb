@@ -17,7 +17,7 @@ html{
     font-size: 10px;
 }
 .wrapper{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     position: relative;
 }
@@ -35,12 +35,12 @@ body{
 }
 /*----------header-css------------------*/
 #header {
-    margin-top: 4.4rem;
+    margin-top: 4rem;
 }
 /*--------logo---------*/
 #header .logo{
     width: 20%;
-    padding-left:1rem;
+    padding-left:2rem;
     display: inline-block;
 }
 .logo a img{
@@ -56,12 +56,10 @@ body{
 #nav ul{
     text-align: center;
 }
-
 #nav ul li {
     display: inline-block;
     padding: 2rem;
 }
-
 #nav ul li a {
     color: #000;
     font-weight: bold;
@@ -115,17 +113,16 @@ body{
     width: 0;
     height: 2.2rem;
     position: absolute;
-    right: 3.5rem;
+    right: 4.5rem;
     border: 0;
     outline: none;
     background-color: #279f7c;
 }
-
 #search  .search-btn{
     width: 3rem;
     height: 2.2rem;
     position: absolute;
-    right: 0;
+    right: 1rem;
     background: url(../img/search.png) no-repeat 0 -4px;
     cursor: pointer;
 }
@@ -150,28 +147,25 @@ body{
         width: 100%;
         background-color: #000;
     }
-
     #nav ul li{
         text-align: center;
         display: block;
         padding: 1rem;
     }
-
     #nav ul li a{
         color: #fff;
     }
+
     #search {
         width: 100%;
         display: inline-block;
         position: relative;
     }
-
     #search input{
         top: -2.2rem;
         width: 30%;
         right: 35%;
     }
-
     #search .search-btn{
         top: -2.2rem;
         right: 30%;
@@ -198,14 +192,11 @@ body{
     #nav:target .close{
         display: block;
     }
-    #nav:target .open{
-        display: none;
-    }
 }
 
 @media (max-width: 480px) {
     #nav .toggle-btn {
-        top: 0.5rem;
+        top: 0rem;
     }
 
     #search .search-btn{

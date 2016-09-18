@@ -22,7 +22,6 @@
                 </li>
             </ul>
         </div>
-        <hr>
 <!--        <div class="clearfix"> </div>-->
     </div>
 </div>
