@@ -1,3 +1,6 @@
+<?php
+    $cate_id = $this -> input -> get('cateId');
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +21,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="js/require.js" data-main="js/index" ></script>
 </head>
 <body>
     <?php include 'header.php'?>
@@ -38,11 +40,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="blog-top">
                 <h2>Latest Blogs</h2>
                 <ul class="blog-cate">
-                    <li><a href="" class="active">All</a></li>
+                    <li><a href="javascript:;" class="active">All</a></li>
                     <?php
                         foreach($categories as $category){
                     ?>
-                            <li><a href=""><?php echo $category -> cate_name?></a></li>
+                            <li>
+                                <a href="javascript:;" data-id="<?php echo $category->cate_id;?>"><?php echo $category->cate_name;?></a>
+                            </li>
                     <?php
                         }
                     ?>
@@ -56,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     foreach ( $blogs as $blog) {
                 ?>
                         <li class="blog-li">
-                            <a href="">
+                            <a href="welcome/view_blog?blogId=<?php echo $blog->blog_id ;?>/">
                                 <img src="<?php echo $blog -> img?>" alt="">
                                 <div class="mask">
                                     <h3 class="blog-title"><?php echo $blog -> title?></h3>
@@ -73,5 +77,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="service"></div>
     <div id="meet"></div>
     <?php include 'footer.php'?>
+    <script src="js/require.js" data-main="js/index" ></script>
 </body>
 </html>

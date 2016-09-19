@@ -30,9 +30,7 @@ body{
     font-size: 1.4rem;
     line-height: 1.42857143;
 }
-::-webkit-input-placeholder{
-    color: #fff;
-}
+
 /*----------header-css------------------*/
 #header {
     margin-top: 4rem;
@@ -114,9 +112,11 @@ body{
     height: 2.2rem;
     position: absolute;
     right: 4.5rem;
+    text-indent: 1rem;
     border: 0;
+    border-bottom: 1px solid #000;
     outline: none;
-    background-color: #279f7c;
+    background-color: #f4f4f4;
 }
 #search  .search-btn{
     width: 3rem;
@@ -138,6 +138,9 @@ body{
 }
 /*--------------nav-css-----------------*/
 @media (max-width: 767px) {
+    ::-webkit-input-placeholder{
+        color: #fff;
+    }
     #header {
         margin-top:2rem;
     }
@@ -165,6 +168,9 @@ body{
         top: -2.2rem;
         width: 30%;
         right: 35%;
+        border-bottom: 1px solid #fff;
+        background-color: transparent;
+        color: #ffffff;
     }
     #search .search-btn{
         top: -2.2rem;

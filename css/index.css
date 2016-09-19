@@ -32,19 +32,23 @@
 #blog .blog-cate li a{
     padding:0.5rem 1rem;
     border-radius: 1rem;
-    color: #009900;
+    color: #279f7c;
     font-weight: bold;
 }
 #blog .blog-cate li a.active{
-    background-color: green;
+    background-color: #279f7c;
     color: #ffffff;
 }
 
 #blog .blog-cate li a:hover {
-    background-color: green;
+    background-color: #279f7c;
     color: #ffffff;
 }
 /*------------blog-list-css-------------------*/
+#blog .blog-list{
+    overflow: hidden;
+    margin-bottom:2rem;
+}
 #blog .blog-li{
     position: relative;
     line-height:0;
@@ -117,48 +121,7 @@
         width: 100%;
         margin-top:2rem;
     }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------media-query-----------------*/
-@media (max-width: 767px) {
-
-}
-
-@media (max-width: 480px) {
     #banner-content{
         float: none;
         max-width: 100%;
