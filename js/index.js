@@ -15,7 +15,7 @@ require([ 'jquery', 'searchbox' ], function($){
                     var blog = data[i];
                     html +=`
                         <li class="blog-li">
-                            <a href="">
+                            <a href="welcome/view_blog?blogId=`+blog.blog_id+`">
                                 <img src="`+blog.img+`" alt="">
                                 <div class="mask">
                                     <h3 class="blog-title">`+blog.title+`</h3>

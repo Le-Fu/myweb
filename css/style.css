@@ -131,9 +131,114 @@ body{
     display: none;
 }
 
+/*----------------footer-css--------------------------------*/
+#footer{
+    background-color: #279f7c;
+}
+#footer .container{
+    display: flex;
+}
+#footer .tb{
+    padding-top:5rem;
+}
+#footer .tweet{
+    flex: 1;
+    height: 30rem;
+    color: #ffffff;
+}
+#footer .userhead{
+    flex: 1;
+    height: 30rem;
+}
+#footer .trbox{
+    margin: 1rem;
+    width: 80%;
+    display: flex;
+}
+#footer .tdbox{
+    flex: 1;
+    height: 7rem;
+    margin: 0  1rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#footer .text-box{
+    width: 23.3rem;
+    border: 0;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 3px;
+    text-indent: 1rem;
+}
+#footer .textarea{
+    border: 0;
+    margin: 0.5rem;
+    border-radius: 3px;
+    text-indent: 1rem;
+}
+#footer button{
+    border: 0;
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: #030;
+    color: #ffffff;
+}
+#footer .contact-us{
+    color: #ffffff;
+    flex: 1;
+    height: 30rem;
+}
+
+#footer .footbar{
+    padding: 2rem 0;
+}
+#footer .share{
+font-size: 4rem;
+color: white;
+}
+#footer .footbar span{
+    display: inline-block;
+    padding:0 2rem;
+}
+#footer .share:hover {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 959px) {
     .wrapper{
-        width: 100%;
+        width: 98%;
     }
 }
 /*--------------nav-css-----------------*/
@@ -196,6 +301,11 @@ body{
         display: block;
     }
     #nav:target .close{
+        display: block;
+    }
+
+
+    #footer .container{
         display: block;
     }
 }
