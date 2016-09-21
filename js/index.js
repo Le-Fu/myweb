@@ -1,4 +1,4 @@
-require([ 'jquery', 'searchbox' ], function($){
+require([ 'jquery', 'searchbox' ,'weixin'], function($){
     $(function(){
         $('.blog-cate a').on('click', function(){
             $(this).parent().siblings().children('a').removeClass('active');

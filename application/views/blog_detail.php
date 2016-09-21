@@ -46,11 +46,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="article-comment">
         <div class="wrapper">
 <!--            <h3><span class="comment-num" id="comment-num">--><?php //echo count($blog->comments);?><!--</span> Responses</h3>-->
-            <h3><span class="comment-num" id="comment-num"><?php echo count($comments);?></span> Responses</h3>
+            <h3><span class="comment-num" id="comment-num"><?php echo count($blog -> comments);?></span> Responses</h3>
             <ul class="comment-list">
                 <?php
 //                    foreach($blog -> comments as $comment){
-                    foreach($comments as $comment){
+                    foreach($blog -> comments as $comment){
                 ?>
                     <li class="comment">
                         <ul class="comment-info">

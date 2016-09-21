@@ -47,15 +47,33 @@ class Welcome extends CI_Controller {
 		$this -> load -> model('blog_model');
 		$this -> load -> model('comment_model');
 		$blog = $this -> blog_model -> get_by_id($blog_id);
-		$comments = $this -> comment_model -> get_by_blog($blog_id);
+		$blog -> comments = $this -> comment_model -> get_by_blog($blog_id);
 		if($blog){
 			$this -> load -> view('blog_detail',array(
-				'blog' => $blog,
-				'comments' => $comments
+				'blog' => $blog
 			));
 		}else{
 			echo 'Can not find the blog.';
 		}
+	}
+
+	public function comment(){
+		$username = $this -> input -> post('username');
+		$email = $this -> input -> post('email');
+		$phone = $this -> input -> post('phone');
+		$message = $this -> input -> post('message');
+		$blog_id = $this -> input -> post('blogId');
+
+		$this -> load -> model('comment_model');
+		$this -> load -> model('blog_model');
+		$rows = $this -> comment_model -> save_comment($username, $email, $phone, $message,$blog_id);
+		if($rows > 0){
+			echo 'success';
+			echo json_encode($rows);
+		}else{
+			echo 'fail';
+		}
+
 	}
 
 

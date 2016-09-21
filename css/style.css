@@ -192,6 +192,18 @@ body{
 
 #footer .footbar{
     padding: 2rem 0;
+    position: relative;
+}
+#weixinma{
+    position: absolute;
+    z-index: 2;
+    top: -20rem;
+    left: -5rem;
+    display: none;
+}
+#weixinma img{
+    width: 20rem;
+    height: 20rem;
 }
 #footer .share{
 font-size: 4rem;
@@ -204,21 +216,6 @@ color: white;
 #footer .share:hover {
     color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

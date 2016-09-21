@@ -37,7 +37,8 @@
         </div>
         <hr>
         <div class="footbar">
-            <span id="weichat"><i class="fa fa-weixin share" aria-hidden="true" ></i></span>
+            <div id="weixinma"><img src="img/weixin.jpg" alt=""></div>
+            <span id="weixin"><i class="fa fa-weixin share" aria-hidden="true" ></i></span>
             <span><a href="http://www.linkedin.com/in/%E5%B0%91%E8%92%99-%E5%8F%B2-50a076114?trk=hp-identity-name"><i class="fa fa-linkedin share" aria-hidden="true"></i></a></span>
             <span><a href="https://github.com/Le-Fu"><i class="fa fa-github share" aria-hidden="true"></a></i></span>
         </div>
