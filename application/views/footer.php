@@ -1,37 +1,17 @@
 <div id="footer">
     <div class="wrapper">
         <div class="container">
-            <div class="tweet tb">
-                <h2>Latest Tweets</h2><br><br>
-                <p>PSD Template: Flat One Page Website</p><br>
-                <p>http://bit.ly/1kfcA8M</p><br><br>
-                <p>PSD Template: Flat One Page Website</p><br>
-                <p>http://bit.ly/1kfcA8M</p>
-
+            <div class="myprofile tb">
+                <code>
+                    <name>Simon</name>
+                    <hobby>football</hobby>
+                </code>
             </div>
-            <div class="userhead tb">
-
-                <div class="trbox">
-                    <div class="tdbox"></div>
-                    <div class="tdbox"></div>
-                    <div class="tdbox"></div>
-                </div>
-                <div class="trbox">
-                    <div class="tdbox"></div>
-                    <div class="tdbox"></div>
-                    <div class="tdbox"></div>
-                </div>
-                <div class="trbox">
-                    <div class="tdbox"></div>
-                    <div class="tdbox"></div>
-                    <div class="tdbox"></div>
-                </div>
-            </div>
-            <div class="contact-us tb">
+            <div class="contact-me tb">
                 <h2>Contact Me</h2><br><br>
-                <p><input type="text" class="text-box"></p>
-                <p><input type="text" class="text-box"></p>
-                <p><textarea name="contact-message" id="" cols="30" rows="5" class="textarea"></textarea></p>
+                <p><input type="text" class="text-box" placeholder="Name"></p>
+                <p><input type="email" class="text-box" placeholder="Email"></p>
+                <p><textarea name="contact-message" id="" cols="30" rows="5" class="textarea" placeholder="Enter your message.."></textarea></p>
                 <p><button>contact</button></p>
             </div>
         </div>

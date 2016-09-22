@@ -6,6 +6,8 @@ require([ 'jquery', 'searchbox','weixin' ], function($) {
             var $phone = $('#phone');
             var $message = $('#message');
             var $blogId = $('#blogId');
+            var $commentNum = $('#comment-num');
+
             $.post('welcome/comment',{
                 username: $username.val(),
                 email: $email.val(),
@@ -13,23 +15,20 @@ require([ 'jquery', 'searchbox','weixin' ], function($) {
                 message: $message.val(),
                 blogId: $blogId.val()
             },function(data){
-                var html = '';
-                if(data == 'success'){
-                    for(var i=0; i<data.length; i++){
-                        var comment =data[i];
-                        html += `
+                if(data=='success'){
+                    alert("评论成功！");
+                    var now = new Date();
+                    var html = `
                             <li class="comment">
                                 <ul class="comment-info">
-                                    <li><i class="fa fa-user flag" aria-hidden="true"></i>&nbsp;`+comment.username+`</li>
-                                    <li><i class="fa fa-calendar-o flag" aria-hidden="true"></i>&nbsp;`+comment.comment_date+`</li>
+                                    <li><i class="fa fa-user flag" aria-hidden="true"></i>&nbsp;`+$username.val()+`</li>
+                                    <li><i class="fa fa-calendar-o flag" aria-hidden="true"></i>&nbsp;`+now.toLocaleDateString()+`</li>
                                 </ul>
-                                <p class="content">`+comment.message+`</p>
+                                <p class="content">`+$message.val()+`</p>
                             </li>
                         `;
-
-                    }
-                    alert("评论成功！");
-
+                    $('.comment-list').prepend(html);
+                    $commentNum.text(parseInt($commentNum.text())+1);
                 }else{
                     alert("评论失败！");
                 }

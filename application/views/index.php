@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <?php
                         }
                     ?>
-                    <li><a href="blog.php">more..</a></li>
+                    <li><a href="welcome/list_blog">more..</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>

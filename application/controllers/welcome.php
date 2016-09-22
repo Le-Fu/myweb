@@ -66,14 +66,16 @@ class Welcome extends CI_Controller {
 
 		$this -> load -> model('comment_model');
 		$this -> load -> model('blog_model');
-		$rows = $this -> comment_model -> save_comment($username, $email, $phone, $message,$blog_id);
+		$rows = $this -> comment_model -> save_comment($username, $email, $phone, $message, $blog_id);
 		if($rows > 0){
 			echo 'success';
-			echo json_encode($rows);
 		}else{
 			echo 'fail';
 		}
+	}
 
+	public function list_blog(){
+		$this ->load -> view('blog-list');
 	}
 
 

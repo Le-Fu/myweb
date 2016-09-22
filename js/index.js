@@ -1,4 +1,5 @@
 require([ 'jquery', 'searchbox' ,'weixin'], function($){
+    //alert(123);
     $(function(){
         $('.blog-cate a').on('click', function(){
             $(this).parent().siblings().children('a').removeClass('active');
