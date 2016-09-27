@@ -1,11 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+	public function __construct(){
+		parent::__construct();
+		$this -> load -> model('blog_category_model');
+		$this -> load -> model('blog_model');
+		$this -> load -> model('comment_model');
 
+	}
 //	public function index()
 //	{
 //		$this -> load -> model('blog_category_model');
-//		$this -> load -> model('blog_model');
+//
 //		$categories = $this -> blog_category_model -> get_all();
 //
 //		$cate_id = $this -> input -> get('cateId');
@@ -21,8 +27,7 @@ class Welcome extends CI_Controller {
 //		));
 //	}
 	public function index(){
-		$this -> load -> model('blog_category_model');
-		$this -> load -> model('blog_model');
+
 		$categories = $this -> blog_category_model -> get_all();
 		$blogs = $this -> blog_model -> get_all();
 		$this -> load -> view('index', array(
@@ -31,7 +36,6 @@ class Welcome extends CI_Controller {
 		));
 	}
 	public function get_blogs(){
-		$this -> load -> model('blog_model');
 
 		$cate_id = $this -> input -> get('cateId');
 		if(!$cate_id){
@@ -44,8 +48,7 @@ class Welcome extends CI_Controller {
 
 	public function view_blog(){
 		$blog_id = $this -> input -> get('blogId');
-		$this -> load -> model('blog_model');
-		$this -> load -> model('comment_model');
+
 		$blog = $this -> blog_model -> get_by_id($blog_id);
 		$blog -> comments = $this -> comment_model -> get_by_blog($blog_id);
 		if($blog){
@@ -64,8 +67,6 @@ class Welcome extends CI_Controller {
 		$message = $this -> input -> post('message');
 		$blog_id = $this -> input -> post('blogId');
 
-		$this -> load -> model('comment_model');
-		$this -> load -> model('blog_model');
 		$rows = $this -> comment_model -> save_comment($username, $email, $phone, $message, $blog_id);
 		if($rows > 0){
 			echo 'success';

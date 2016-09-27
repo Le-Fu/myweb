@@ -19,16 +19,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="css/blog-list.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="js/require.js" data-main="js/blog-list" ></script>
+
 </head>
 <body>
-    <?php include 'header.php'?>
-    <ul class="blog-list">
-        <li class="blog-li">
+<?php include 'header.php'?>
+        <div class="wrapper">
+            <ul id="blog-list">
+                <li class="blog-li">
+                    <img src="<?php ?>" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button>READ</button>
+                    <br>
+                </li>
+            </ul>
+        </div>
 
-        </li>
-    </ul>
-
-
-    <?php include 'footer.php'?>
+<?php include 'footer.php'?>
 </body>
 </html>

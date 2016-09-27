@@ -15,9 +15,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             window.scrollTo(0, 1);
         }
     </script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog_detail.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
     <?php include 'header.php'?>

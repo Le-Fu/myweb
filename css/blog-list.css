@@ -1,0 +1,28 @@
+/*------------------blog-list-----------*/
+#blog-list{
+    overflow: hidden;
+}
+#blog-list .blog-li{
+    width: 46%;
+    padding: 2% ;
+    /*display: inline-block;*/
+    float: left;
+}
+
+
+#blog-list .blog-li img{
+    width: 100%;
+    height: 30rem;
+}
+
+#blog-list button{
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    color: #ffffff;
+    background-color: #279f7c;
+}
+#blog-list button:hover{
+    background-color: #7aa;
+}

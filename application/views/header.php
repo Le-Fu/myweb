@@ -12,7 +12,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="welcome/list_blog">Blog</a></li>
                 <li><a href="#">Contact</a></li>
                 <li>
                     <div id="search">

@@ -1,3 +1,3 @@
-require([ 'jquery' ], function(){
+require([ 'jquery', 'weixin' ], function($){
 
 });
