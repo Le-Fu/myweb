@@ -15,7 +15,8 @@
     height: 30rem;
 }
 
-#blog-list button{
+#blog-list a{
+    display: inline-block;
     border: 1px solid white;
     border-radius: 8px;
     padding: 1rem 2rem;
@@ -23,6 +24,10 @@
     color: #ffffff;
     background-color: #279f7c;
 }
-#blog-list button:hover{
+#blog-list a:hover{
     background-color: #7aa;
+}
+
+#blog-list .load-more{
+
 }

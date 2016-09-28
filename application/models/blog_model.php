@@ -23,5 +23,11 @@ class Blog_model extends CI_Model {
         $this -> db -> join('t_blog_category cate', 'blog.cate_id=cate.cate_id');
         $this -> db -> where('blog.blog_id', $blog_id);
         return $this -> db -> get() -> row();
+}
+
+    public function get_by_page(){
+        $this -> db -> order_by('post_time', 'desc');
+        $this -> db -> limit(6);
+        return $this -> db -> get('t_blog') ->result();
     }
 }

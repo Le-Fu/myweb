@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,14 +26,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <?php include 'header.php'?>
         <div class="wrapper">
             <ul id="blog-list">
-                <li class="blog-li">
-                    <img src="<?php ?>" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <button>READ</button>
-                    <br>
-                </li>
+                <?php
+                    foreach ($blogs as $blog) {
+                ?>
+                    <li class="blog-li">
+                        <img src="<?php echo $blog -> img ?>" alt="">
+                        <p>
+                            <?php echo $blog -> content?>
+                        </p>
+                        <a href="welcome/view_blog?blogId=<?php echo $blog -> blog_id?>">READ</a>
+                        <br>
+                    </li>
+                <?php
+                    }
+                ?>
             </ul>
+            <span>
+                <button class="load-more">
+                    Load more ...
+                </button>
+                </span>
         </div>
 
 <?php include 'footer.php'?>

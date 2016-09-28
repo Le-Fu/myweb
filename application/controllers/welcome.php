@@ -76,7 +76,10 @@ class Welcome extends CI_Controller {
 	}
 
 	public function list_blog(){
-		$this ->load -> view('blog-list');
+        $blogs = $this ->blog_model ->get_all();
+$this ->load -> view('blog-list', array(
+            'blogs' => $blogs
+        ));
 	}
 
 
