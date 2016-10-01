@@ -5,14 +5,12 @@
 #blog-list .blog-li{
     width: 46%;
     padding: 2% ;
-    /*display: inline-block;*/
     float: left;
 }
 
-
 #blog-list .blog-li img{
     width: 100%;
-    height: 30rem;
+    height: 25rem;
 }
 
 #blog-list a{
@@ -28,6 +26,19 @@
     background-color: #7aa;
 }
 
-#blog-list .load-more{
-
+.load-more{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.load-more button{
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    color: #ffffff;
+    background-color: #279f7c;
+}
+.load-more button:hover{
+    cursor: pointer;
+    background-color: #7aa;
 }

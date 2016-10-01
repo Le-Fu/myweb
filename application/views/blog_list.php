@@ -19,35 +19,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog-list.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="js/require.js" data-main="js/blog-list" ></script>
-
 </head>
 <body>
-<?php include 'header.php'?>
-        <div class="wrapper">
-            <ul id="blog-list">
-                <?php
-                    foreach ($blogs as $blog) {
-                ?>
-                    <li class="blog-li">
-                        <img src="<?php echo $blog -> img ?>" alt="">
-                        <p>
-                            <?php echo $blog -> content?>
-                        </p>
-                        <a href="welcome/view_blog?blogId=<?php echo $blog -> blog_id?>">READ</a>
-                        <br>
-                    </li>
-                <?php
-                    }
-                ?>
-            </ul>
-            <span>
-                <button class="load-more">
-                    Load more ...
-                </button>
-                </span>
-        </div>
+<?php include 'header.php';?>
+  <div class="wrapper">
+    <ul id="blog-list">
+      <?php
+        foreach ($blogs as $blog) {
+      ?>
+        <li class="blog-li">
+          <img src="<?php echo $blog -> img ?>" alt="">
+          <p>
+              <?php echo $blog -> content?>
+          </p>
+          <a href="welcome/view_blog?blogId=<?php echo $blog -> blog_id?>">READ</a>
+          <br>
+        </li>
+      <?php
+        }
+      ?>
+    </ul>
+      <div class="load-more">
+        <button id="btn-more">
+            Load more ...
+        </button>
+      </div>
+  </div>
 
-<?php include 'footer.php'?>
+<?php include 'footer.php';?>
+  <script src="js/require.js" data-main="js/blog_list" ></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ class Blog_model extends CI_Model {
         )) -> result();
     }
 
-    public  function get_by_id($blog_id){
+    public function get_by_id($blog_id){
         $this -> db -> select('blog.*, cate.cate_name');
         $this -> db -> from('t_blog blog');
         $this -> db -> join('t_blog_category cate', 'blog.cate_id=cate.cate_id');
@@ -25,9 +25,9 @@ class Blog_model extends CI_Model {
         return $this -> db -> get() -> row();
 }
 
-    public function get_by_page(){
+    public function get_by_page($offset=0){
         $this -> db -> order_by('post_time', 'desc');
-        $this -> db -> limit(6);
-        return $this -> db -> get('t_blog') ->result();
+        $this -> db -> limit(6, $offset);
+        return $this -> db -> get('t_blog') -> result();
     }
 }

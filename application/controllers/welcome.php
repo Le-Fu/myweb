@@ -76,11 +76,16 @@ class Welcome extends CI_Controller {
 	}
 
 	public function list_blog(){
-        $blogs = $this ->blog_model ->get_all();
-$this ->load -> view('blog-list', array(
-            'blogs' => $blogs
-        ));
+    $blogs = $this ->blog_model ->get_all();
+		$this ->load -> view('blog_list', array(
+	      'blogs' => $blogs
+	  ));
 	}
 
+	public function get_more(){
+		$offset = $this -> input -> get('offset');
+		$blogs = $this -> blog_model -> get_by_page($offset);
+		echo json_encode($blogs);
+	}
 
 }
