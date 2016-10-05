@@ -36,9 +36,7 @@
     <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
         <h3>登录</h3>
         <hr>
-
-
-        <form method="post" class="am-form">
+        <form method="post" class="am-form" action="admin/do_login.php">
             <label for="email">邮箱:</label>
             <input type="email" name="" id="email" value="">
             <br>
@@ -52,5 +50,6 @@
         <hr>
     </div>
 </div>
+
 </body>
 </html>
