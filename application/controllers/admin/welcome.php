@@ -22,13 +22,13 @@ class Welcome extends CI_Controller {
         $email = $this -> input -> post('email');
         $pwd = $this -> input -> post('pwd');
         $row = $this -> admin_model -> get_by_email_pwd($email, $pwd);
+        var_dump($row);
+        die();
         if($row > 0){
             echo 'success';
-            redirect('admin/index');
         }else{
             echo 'fail';
         }
-
     }
 
 }

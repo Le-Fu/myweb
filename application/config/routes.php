@@ -42,7 +42,9 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 $route['admin'] = 'admin/welcome/login';
 $route['admin/login'] = 'admin/welcome/login';
-$route['admin/(:any)'] = 'admin/welcome/$1';
+$route['admin/do_login'] = 'admin/welcome/do_login';
+$route['admin/index'] = 'admin/welcome/index';
+
 
 
 
