@@ -71,6 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <p><input type="email" placeholder="Email" id="email" class="text-box" name="email"></p>
                 <p><input type="tel" placeholder="Phone" id="phone" class="text-box" name="phone"></p>
                 <p><textarea name="message" id="message" cols="30" rows="5" placeholder="Enter your messages.."></textarea></p>
+                <p><small>还可以数入<span id="count-num">0</span>个字。</small></p>
                 <p><input type="button" value="Send" id="btn-send"></p>
                 <!--				<    /form>-->
             </div>

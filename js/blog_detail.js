@@ -1,5 +1,10 @@
 require([ 'jquery', 'searchbox','weixin' ], function($) {
     $(function () {
+        //检测字数
+        $('#message').on('keyup', function(){
+            var str = $(this).val();
+            $('#count-num').text(255-str.length);
+        });
         $('#btn-send').on('click', function () {
             var $username = $('#username');
             var $email = $('#email');
