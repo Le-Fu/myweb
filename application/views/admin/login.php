@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
   <style>
     body{
-      background: url(img/admin/login_bg.jpg) no-repeat 0 0;
+      background: url(img/login_bg.jpg) no-repeat 0 0;
       background-size: cover;
       color: #fff;
     }
@@ -23,34 +23,25 @@
     .header h1 {
       font-style: italic;
       font-size: 400%;
-      color: rgb(109,189,32);
+      color: #0C79B1;
       margin-top: 30px;
-    }
-    .header p {
-      font-size: 25px;
     }
   </style>
 </head>
 <body>
 <div class="header">
   <div class="am-g">
-    <h1>wellcee</h1>
-    <p><strong>Well</strong>,it's glod to <strong>cee</strong> you</p>
+    <h1>Opacity</h1>
   </div>
 </div>
 <div class="am-g">
   <div class="am-u-lg-4 am-u-md-8 am-u-sm-centered">
-    <form method="post" class="am-form" action="admin/check_login">
+    <form method="post" class="am-form" action="admin/do_login">
       <label for="admin-name">用户名:</label>
       <input type="text" name="admin-name" id="admin-name" value="">
       <br>
       <label for="password">密码:</label>
       <input type="password" name="password" id="password" value="">
-      <br>
-      <label for="remember-me">
-        <input id="remember-me" type="checkbox">
-        记住密码
-      </label>
       <br />
       <div class="am-cf">
         <input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm am-fl">

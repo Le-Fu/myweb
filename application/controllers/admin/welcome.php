@@ -17,13 +17,13 @@ class Welcome extends CI_Controller {
         $this -> load -> view('admin/admin_index');
     }
 
-    public function do_login()
-    {
+    public function do_login(){
         $email = $this -> input -> post('email');
         $pwd = $this -> input -> post('pwd');
         $row = $this -> admin_model -> get_by_email_pwd($email, $pwd);
         if($row > 0){
-            echo 'success';
+            $this -> session -> set_userdata("login_admin", $row);
+            redirect('admin/index');
         }else{
             echo 'fail';
         }
