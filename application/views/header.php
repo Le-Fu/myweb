@@ -1,12 +1,12 @@
+
 <div id="header">
     <div class="wrapper">
 
         <div class="logo">
-          <a href=""><img src="img/logo.png" alt=""></a>
+          <a href=""><h1 id="web_name">Opacity</h1></a>
         </div>
 
-        <div id="nav">
-            <a href="#nav" class="open toggle-btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <div id="nav"><a href="#nav" class="open toggle-btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
             <a href="   " class="close toggle-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
             <ul class="menu">
                 <li><a href="#">Home</a></li>
