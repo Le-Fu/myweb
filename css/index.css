@@ -1,6 +1,35 @@
+#o {
+	/*position: relative;*/
+}
 /* page1-css */
-#page1 {
-	background: url(../img/face_bg1.png) center;
+#page1{
+	position: relative;
+	background-image: url(../img/face_bg.png);
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+/* header-style */
+#page1 a {
+	color: #fff;
+}
+#page1 .nav a:hover {
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .3);
+}
+#page1 .navbar-brand {
+	font-size: 3rem;
+}
+
+/* info - panel - style */
+#stage {
+	-webkit-perspective: 800px;	
+}
+#stage .panel {
+	margin: 20px auto;
+	width: 100%;
+	height: 500px;
+	border-radius: 30px;
+	background-color: rgba(0, 0, 100, .2);
+	-webkit-transform-style: preserve-3d;
+}
+
