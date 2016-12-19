@@ -1,35 +1,258 @@
 #o {
-	/*position: relative;*/
+	font-family: Consolas, Monaco, Courier New, Courier, monospace;
 }
-/* page1-css */
+.section {
+	overflow: hidden;
+}
+footer {
+	background-color: #19A7F7;
+}
+/*------------------------- page1-css------------------------------ */
 #page1{
-	position: relative;
-	background-image: url(../img/face_bg.png);
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-/* header-style */
-#page1 a {
+	text-align: center;
 	color: #fff;
 }
-#page1 .nav a:hover {
-	border-radius: 10px;
-	background-color: rgba(0, 0, 0, .3);
-}
-#page1 .navbar-brand {
-	font-size: 3rem;
+
+#page1 .welcome-message {
+	padding-top: 20%;
 }
 
+#canvas-board {
+	width: 100%;
+	height: 40rem;
+}
+#canvas-board canvas{
+	position: absolute;	
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+} 
+
+
+
+/*------------------------- page2-css------------------------------ */
+ #page2{
+	position: relative;
+	text-align: center; 	
+}
+ 
+#page2 .caption {
+	padding-top: 100px;
+}
+
+#page2 .h5_component {
+	position: relative;
+}
+
+#page2 canvas{
+	position: absolute;	
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+} 
+
+#page2 .text{
+	position: absolute;
+	font-size: 1.5rem;
+}
+
+
+/*corousel*/
+
+#page2 #myCarousel {
+	position: relative;
+	width: 100%;
+	height: 30rem;
+	padding-top: 10rem;
+}
+
+#page2 .carousel-indicators li {
+    border-color: #99C0FF;
+}
+
+#page2 .carousel-indicators li.active {
+    background-color: #99C0FF;
+}
+.to-myblog	{
+	display: none;
+}
+
+
+/*------------------------- page3-css------------------------------ */
+#page3 {
+	transition: all 2s ease-in-out;
+}
+
+/* #page3 .project {
+	position: relative;
+	top: 150px;
+	border-radius: 3px;
+	background-color: rgba(255, 255, 255, .9);
+	padding: 10px;
+	text-align: center;
+}
+#page3 .project-img {
+	overflow: hidden;
+}
+#page3 img {
+	width: 100%;
+	filter:
+}
+#page3 img:hover {
+	width: 100%;
+	transform: scale(1.1);
+}
+#page3 .view-project {
+	margin: 0 auto;
+	border: 1px solid #000;
+	background-color: #000;
+	width: 50%;
+	height: 35px;
+	padding-top: 7px;
+	color: #fff;
+}
+#page3 .view-project:hover {
+	background-color: #fff;
+	color: #000;
+} */
+
+.project-caption {
+	padding-left: 20px;
+}
+
+
+#projects {
+	position: relative;
+	top: 100px;
+	background-color: #FAFAFA;
+	border-radius: 8px;
+	overflow: hidden;
+}
+#projects .project {
+	float: left;
+	border: 1px solid #eee;
+	width: 25%;
+	padding: 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+
+}
+#projects .project:hover {
+	box-shadow: 0 0 38px rgba(0,0,0,.08) inset;
+    transition: all .15s ease;
+}
+#projects .project img{
+	width: 100%;
+}
+#page3 .view-project {
+	margin: 0 auto;
+	border: 1px solid #000;
+	background-color: #000;
+	width: 50%;
+	height: 35px;
+	padding-top: 7px;
+	color: #fff;
+}
+#page3 .view-project:hover {
+	background-color: #fff;
+	color: #000;
+    transition: all .15s ease;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------- page4-css------------------------------ */
 /* info - panel - style */
+
 #stage {
 	-webkit-perspective: 800px;	
 }
 #stage .panel {
-	margin: 20px auto;
+	margin: 4rem auto;
 	width: 100%;
-	height: 500px;
+	height: 40rem;
 	border-radius: 30px;
-	background-color: rgba(0, 0, 100, .2);
+	background-color: rgba(25, 172, 251, 0);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, .5); 
+	background-image: url(../img/info-panel.png);
+	background-size: 100%;
 	-webkit-transform-style: preserve-3d;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 响应式 */
+@media (max-width: 980px) {
+    #canvas-board{
+        display: none;
+    }
+    .to-myblog	{
+		display: block;
+	}
+	#projects .project {
+		width: 50%;
+	}
+	#projects .project:nth-child(2n){
+		display: none;
+	}
+}
+@media (max-width: 980px) {
+	#projects .project {
+		width: 100%;
+	}
+	#projects .project:nth-child(1){
+		display: none;
+	}
+}

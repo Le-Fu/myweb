@@ -15,38 +15,167 @@
         }
     </script>
 
-
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
     <div id="o">
 
-
         <div id="page1" class="section">
             <?php include 'header.php';?> 
-            
-            <!-- info_panel -->
-            <div id="stage" class="container">
-                <div class="panel">
-                    <div class="row">
-                        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="welcome-message">
+                            <h1>Less is more.</h1>
+                            <h3>Welcome ! I'm so happy that you come here . As a web developer , I'd like to pursue nice design and enjoy coding .</h3>
+                            <br>
+                            <div>Konw more about me</div>
+                        </div>
                     </div>
-
-                    
+                    <div class="col-md-6">
+                        <div id="canvas-board">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-
         </div>
 
-        
+
+        <div id="page2" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="caption">Topics of my blogs</h2>
+                        <div class="radar">
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="blog-show">
+                            <h2 class="caption">My recent blogs</h2>
+                            <h3 class="to-myblog"><a href="">click and read more of my blog!</a></h3>
+                            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                              <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <h3>React 组件之间传值</h3><br>   
+                                        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">l Roe, Vice President, Comment Box</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>React 组件之间传值</h3><br>   
+                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Repsdkfl Inc</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>React 组件之间传值</h3><br>   
+                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Resdjfklasjdfop Inc</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>React 组件之间传值</h3><br>   
+                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep sdc</span></h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>React 组件之间传值</h3><br>   
+                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep </span></h4>
+                                    </div>
+                                </div>
+                                
+                        
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <div id="page3" class="section">
+            <div class="container">
+                <div id="projects">
+                    <div class="project-caption">
+                        <h3>New Projects</h3>
+                    </div>
+                    <div class="project-row">
+                        <div class="project">
+                            <div class="project-img">
+                                <img src="img/wellcee.jpg" alt="">
+                            </div>
+                            <div class="desc-box">
+                                <h4 class="title">wellcee</h4>
+                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                            </div>
+                            <br>
+                            <a href=""><div class="view-project">view detail</div></a>
+                        </div>
+                        <div class="project">
+                             <div class="project-img">
+                                <img src="img/wellcee.jpg" alt="">
+                            </div>
+                            <div class="desc-box">
+                                <h4 class="title">wellcee</h4>
+                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                            </div>
+                            <br>
+                            <a href=""><div class="view-project">view detail</div></a>
+                        </div>
+                        <div class="project">
+                             <div class="project-img">
+                                <img src="img/wellcee.jpg" alt="">
+                            </div>
+                            <div class="desc-box">
+                                <h4 class="title">wellcee</h4>
+                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                            </div>
+                            <br>
+                            <a href=""><div class="view-project">view detail</div></a>
+                        </div>
+                        <div class="project">
+                             <div class="project-img">
+                                <img src="img/wellcee.jpg" alt="">
+                            </div>
+                            <div class="desc-box">
+                                <h4 class="title">wellcee</h4>
+                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                            </div>
+                            <br>
+                            <a href=""><div class="view-project">view detail</div></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+         
+        <div id="page4" class="section">
+             
+            <!-- info_panel -->
+            <div id="stage" class="container">
+                <a href="">
+                    <div class="panel">    
+
+                    </div>
+                </a>
+            </div>
+         
+        </div>
+
+        <?php  include 'footer.php' ;?>
     </div>
     
 
-    <script src="js/require.js" data-main="js/index" ></script>
+    <script src="js/require.js" data-main="js/index"></script>
 </body>
 </html>

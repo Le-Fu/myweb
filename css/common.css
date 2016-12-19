@@ -1,3 +1,4 @@
+
 /*----------reset-css----------------*/
 *{
     margin: 0;
@@ -5,6 +6,9 @@
 }
 a{
     text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
 }
 ul,ol{
     list-style: none;
@@ -14,5 +18,86 @@ img{
 }
 /*----------common-css----------------*/
 html {
-	font-size: 10px;
+	font-size: 12px;
+}
+
+/* 选中字体样式 */
+::selection{ background-color: rgba(0, 0, 0, .4); color: white; }
+/*::;*/
+/*自定义滚动条  */
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment{width:0;height:0;}
+::-webkit-scrollbar-button:vertical:increment{background:transparent;}
+::-webkit-scrollbar-track-piece:vertical{background:#DFE7EF;}
+::-webkit-scrollbar-track-piece:vertical:hover{background:#DFE7EF;}
+::-webkit-scrollbar-track-piece:horizontal{background-color:transparent;}
+::-webkit-scrollbar-thumb:vertical{height:100px;background:rgba(0, 0, 0,.5);}
+::-webkit-scrollbar-thumb:vertical:hover{background:rgba(5, 5, 2,.4);}
+::-webkit-scrollbar-thumb:horizontal{width:80px;height:10px;background-color: transparent;}
+
+
+/* navbar 样式 */
+
+.navbar a {
+	color: #fff;
+	font-family: Georgia, serif;
+}
+.navbar {
+	padding: 1.5rem 0;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+	background-color: #56D0B3;
+}
+.navbar li:hover {
+	border-radius: 1rem;
+	background-color: rgba(0, 0, 0, .3);
+}
+.navbar-brand {
+	font-size: 3rem;
+}
+button.navbar-toggle {
+	border: 1px solid #fff;
+}
+span.icon-bar {
+	border: 2px solid #fff;
+}
+
+/* footer  样式*/
+footer {
+	width: 100%;
+	/*height: 5rem;*/
+	position: absolute;
+	bottom: 0;
+	background-color: #56D0B3;
+	font-size: 4rem;
+}
+footer li {
+	position: relative;
+	display: inline-block;
+}
+footer li a{
+	color: #fff;
+}
+footer li .fa-wechat:hover{
+	color: #00ff00;
+}
+footer li .fa-github:hover{
+	color: #000;
+}
+footer li .fa-facebook-official:hover{
+	color: #3B589C;
+}
+footer li .fa-twitter-square:hover{
+	color: #19ACFB;
+}
+#weixinma {
+	position: absolute;
+	top: -150px;
+	left: -50px;
+	width: 150px;
+	display: none;
+}
+#weixinma img{
+	width: 100%;
+
 }

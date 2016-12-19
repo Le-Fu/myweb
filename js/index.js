@@ -3,49 +3,97 @@ requirejs.config({
         'jquery.fullPage': {
             deps: ['jquery'],
             exports: 'jQuery.fn.fullpage'
+        },
+        'bootstrap.min': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.bootstrap'
         }
-    }
+    },
 });
-require([ 'jquery', 'jquery.fullPage'], function($){
+require([ 'jquery', 'radar', 'drawShape', 'jquery.fullPage', '3d_panel' ,'bootstrap.min', 'weixin'], function($, H5ComponentRadar){
+
     $(function(){
-        $('#o').fullpage({
-            sectionsColor : ['#EDEDED'],
-        });
 
-        /*3D-info-panel*/
+         
 
-        var panel = $('.panel');
+        //雷达图配置        
+        var radar_cfg = {
 
-        function rock(x, y, per) {
-            panel.css({
-                transform: 'rotateY('+ x +'deg) rotateX('+ y +'deg)',
-                transition: 'all .006s ease-in-out'
-            });
+            type : 'radar',
+            width : 450,
+            height : 450,
+            data:[
+                ['ES6' , .8  ],
+                ['CSS3' , .5 ],
+                ['HTML5' , .6  ],
+                ['REACT' , .4  ],
+                ['OTHER' , .5 ]
+            ],
+            css : {
+                top: 0,
+                opacity:0
+            },
+            animateIn:{
+                top: 100,
+                opacity:1,
+            },
+            animateOut:{
+                top: 0,
+                opacity:0,
+            },
+            center: true,
         };
+        var radar = new H5ComponentRadar( 'myRadar', radar_cfg );
+        $('.radar').append(radar);
 
-        panel.on('mouseover', function (e) {
-            panel.on('mousemove', function (e) {
 
-                var xPos = e.offsetX;
-                var yPos = e.offsetY;
-                var width = this.offsetWidth;
-                var height = this.offsetHeight;
 
-                var xRotate = ((xPos - width/2) / width/2)*15,
-                    yRotate = -((yPos - height/2) / height/2)*20;
-                if (!(xPos < 50 || xPos > (width-50) || yPos < 50 || yPos > (height - 50))) {
-                    rock(xRotate, yRotate);
+
+        $('#o').fullpage({
+            // verticalCentered: false,
+            autoScrolling: false,
+            sectionsColor : ['#56D0B3', '#F5F5F5', '#99C0FF', '#19A7F7'],
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+
+            afterLoad: function(anchorLink, index){
+                var loadedSection = $(this);
+
+                //using index
+                if(index == 2){
+                    //轮播图
+                    $('#myCarousel').carousel({
+                        interval: 2000
+                    });
+                    //radar组件进入
+                    $('.h5_component').trigger( 'onLoad' );
+
+                }
+                
+
+
+            },
+            onLeave: function(index, nextIndex, direction){
+                var leavingSection = $(this);
+
+                //after leaving section 2
+                if(index == 2 && direction =='down'){
+                    $('.h5_component').trigger( 'onLeave' );
+                   
                 }
 
-            });
-
+                else if(index == 2 && direction == 'up'){
+                    $('.h5_component').trigger( 'onLeave' );
+                    
+                }
+            }
+            
         });
 
-        panel.on('mouseout', function (e) {
-            var xRotate = ((e.offsetX - this.offsetWidth/2) / this.offsetWidth/2)*15,
-                yRotate = -((e.offsetY - this.offsetHeight/2) / this.offsetHeight/2)*20;
-            rock(0, 0);
-        })
+
+
+    
+
+
 
 
 
@@ -53,4 +101,4 @@ require([ 'jquery', 'jquery.fullPage'], function($){
     });
 
 
-} );
+});
