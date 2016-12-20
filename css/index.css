@@ -85,38 +85,6 @@ footer {
 	transition: all 2s ease-in-out;
 }
 
-/* #page3 .project {
-	position: relative;
-	top: 150px;
-	border-radius: 3px;
-	background-color: rgba(255, 255, 255, .9);
-	padding: 10px;
-	text-align: center;
-}
-#page3 .project-img {
-	overflow: hidden;
-}
-#page3 img {
-	width: 100%;
-	filter:
-}
-#page3 img:hover {
-	width: 100%;
-	transform: scale(1.1);
-}
-#page3 .view-project {
-	margin: 0 auto;
-	border: 1px solid #000;
-	background-color: #000;
-	width: 50%;
-	height: 35px;
-	padding-top: 7px;
-	color: #fff;
-}
-#page3 .view-project:hover {
-	background-color: #fff;
-	color: #000;
-} */
 
 .project-caption {
 	padding-left: 20px;
@@ -125,10 +93,10 @@ footer {
 
 #projects {
 	position: relative;
-	top: 100px;
+	top: 90px;
 	background-color: #FAFAFA;
 	border-radius: 8px;
-	overflow: hidden;
+	overflow: scroll;
 }
 #projects .project {
 	float: left;

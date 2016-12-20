@@ -125,8 +125,8 @@
                                 <img src="img/wellcee.jpg" alt="">
                             </div>
                             <div class="desc-box">
-                                <h4 class="title">wellcee</h4>
-                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                                <h4 class="title">色彩实验室</h4>
+                                <p class="desc">网页配色一直以来都是让人前端开发人员头疼的一件事，我探索了一些良好的配色方案。</>
                             </div>
                             <br>
                             <a href=""><div class="view-project">view detail</div></a>
@@ -136,8 +136,8 @@
                                 <img src="img/wellcee.jpg" alt="">
                             </div>
                             <div class="desc-box">
-                                <h4 class="title">wellcee</h4>
-                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                                <h4 class="title">H5页面</h4>
+                                <p class="desc">这是给一家珠宝公司做的H5宣传页。</>
                             </div>
                             <br>
                             <a href=""><div class="view-project">view detail</div></a>
@@ -147,8 +147,8 @@
                                 <img src="img/wellcee.jpg" alt="">
                             </div>
                             <div class="desc-box">
-                                <h4 class="title">wellcee</h4>
-                                <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
+                                <h4 class="title">京东服务商</h4>
+                                <p class="desc">这是一个黑龙江3000余家商户接入和管理的平台。</>
                             </div>
                             <br>
                             <a href=""><div class="view-project">view detail</div></a>

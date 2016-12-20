@@ -44,8 +44,8 @@ html {
 }
 .navbar {
 	padding: 1.5rem 0;
-	border-bottom: 1px solid #eee;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+	/*border-bottom: 1px solid #eee;*/
+	/*box-shadow: 0 0 8px rgba(0, 0, 0, .3);*/
 	background-color: #56D0B3;
 }
 .navbar li:hover {
@@ -88,7 +88,7 @@ footer li .fa-facebook-official:hover{
 	color: #3B589C;
 }
 footer li .fa-twitter-square:hover{
-	color: #19ACFB;
+	color: #99C0FF;
 }
 #weixinma {
 	position: absolute;
