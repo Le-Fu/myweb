@@ -43,14 +43,15 @@ html {
 	font-family: Georgia, serif;
 }
 .navbar {
+	text-align: center;
 	padding: 1.5rem 0;
 	/*border-bottom: 1px solid #eee;*/
 	/*box-shadow: 0 0 8px rgba(0, 0, 0, .3);*/
 	background-color: #56D0B3;
 }
-.navbar li:hover {
+.navbar li a:hover {
 	border-radius: 1rem;
-	background-color: rgba(0, 0, 0, .3);
+	background-color: rgba(0, 0, 0, .1);
 }
 .navbar-brand {
 	font-size: 3rem;
@@ -66,8 +67,8 @@ span.icon-bar {
 footer {
 	width: 100%;
 	/*height: 5rem;*/
-	position: absolute;
-	bottom: 0;
+	/*position: relative;*/
+	/*bottom: 0;*/
 	background-color: #56D0B3;
 	font-size: 4rem;
 }
@@ -100,4 +101,41 @@ footer li .fa-twitter-square:hover{
 #weixinma img{
 	width: 100%;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* go-top */
+#go-top{
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	background-color: #56D0B3;
+	text-decoration: none;
+	display: none;
+	color: #fff;
+}
+
+
+
+
+/* responsible */
+@media (max-width: 980px) {
+	.navbar {
+		padding: 0;
+	}
 }

@@ -58,7 +58,9 @@
 
                     <div class="col-md-6">
                         <div class="blog-show">
-                            <h2 class="caption">My recent blogs</h2>
+                            <a href="welcome/list_blog">
+                                <h2 class="caption">My recent blogs</h2>
+                            </a>
                             <h3 class="to-myblog"><a href="">click and read more of my blog!</a></h3>
                             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
                               <!-- Indicators -->
@@ -68,30 +70,31 @@
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                     <li data-target="#myCarousel" data-slide-to="3"></li>
                                     <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
                                 </ol>
 
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <h3>React 组件之间传值</h3><br>   
-                                        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">l Roe, Vice President, Comment Box</span></h4>
-                                    </div>
-                                    <div class="item">
-                                        <h3>React 组件之间传值</h3><br>   
-                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Repsdkfl Inc</span></h4>
-                                    </div>
-                                    <div class="item">
-                                        <h3>React 组件之间传值</h3><br>   
-                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Resdjfklasjdfop Inc</span></h4>
-                                    </div>
-                                    <div class="item">
-                                        <h3>React 组件之间传值</h3><br>   
-                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep sdc</span></h4>
-                                    </div>
-                                    <div class="item">
-                                        <h3>React 组件之间传值</h3><br>   
-                                        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep </span></h4>
-                                    </div>
+
+                                        <div class="item active">
+                                            <a href="welcome/view_blog?blogId=1">
+                                                <h3>Blog Title.</h3><br>   
+                                            </a>
+                                            <h4>This is a description of this blog, click the title, you can read the detail.</h4>
+                                        </div>
+                                    <?php 
+                                        foreach ($blogs as $blog) {
+                                    ?>
+                                            <div class="item">
+                                                <a href="welcome/view_blog?blogId= <?php echo $blog -> blog_id; ?>">
+                                                    <h3><?php echo $blog -> title; ?></h3><br>   
+                                                </a>    
+                                                <h4><?php echo $blog -> desc; ?></h4>
+                                            </div>
+                                    <?php 
+                                        }
+                                     ?>
+                                    
                                 </div>
                                 
                         
@@ -118,7 +121,7 @@
                                 <p class="desc">这是一个租房网站，主要客户是法国留学生。</>
                             </div>
                             <br>
-                            <a href=""><div class="view-project">view detail</div></a>
+                            <a href="http://wellcee.com"><div class="view-project">view detail</div></a>
                         </div>
                         <div class="project">
                              <div class="project-img">
@@ -153,6 +156,7 @@
                             <br>
                             <a href=""><div class="view-project">view detail</div></a>
                         </div>
+                       
                     </div>
                 </div>
 
@@ -163,7 +167,7 @@
              
             <!-- info_panel -->
             <div id="stage" class="container">
-                <a href="">
+                <a href="welcome/contact">
                     <div class="panel">    
 
                     </div>

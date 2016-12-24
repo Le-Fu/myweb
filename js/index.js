@@ -23,7 +23,7 @@ require([ 'jquery', 'radar', 'drawShape', 'jquery.fullPage', '3d_panel' ,'bootst
             width : 450,
             height : 450,
             data:[
-                ['ES6' , .8  ],
+                ['Progressive Web Apps' , .8  ],
                 ['CSS3' , .5 ],
                 ['HTML5' , .6  ],
                 ['REACT' , .4  ],

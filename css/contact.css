@@ -1,0 +1,18 @@
+body {
+	background-color: #fafafa;
+}
+.media img {
+	width: 100px;
+	height: 120px;
+}
+
+.row {
+	margin-bottom: 30px;
+}
+.media-body {
+	padding-left: 1.5rem;
+}
+
+#email-content {
+	height: 172px;
+}

@@ -44,6 +44,7 @@ $route['admin'] = 'admin/welcome/login';
 $route['admin/login'] = 'admin/welcome/login';
 $route['admin/do_login'] = 'admin/welcome/do_login';
 $route['admin/index'] = 'admin/welcome/index';
+$route['blog_list'] = 'welcome/list_blog';
 
 
 

@@ -8,43 +8,15 @@ class Welcome extends CI_Controller {
 		$this -> load -> model('comment_model');
 
 	}
-//	public function index()
-//	{
-//		$this -> load -> model('blog_category_model');
-//
-//		$categories = $this -> blog_category_model -> get_all();
-//
-//		$cate_id = $this -> input -> get('cateId');
-//		if($cate_id){
-//			$blogs = $this -> blog_model -> get_by_category($cate_id);
-//		}else{
-//			$blogs = $this -> blog_model -> get_all();
-//		}
-//
-//		$this -> load -> view('index', array(
-//				"categories" => $categories,
-//				"blogs" => $blogs
-//		));
-//	}
+
 	public function index(){
 
-		$categories = $this -> blog_category_model -> get_all();
 		$blogs = $this -> blog_model -> get_all();
 		$this -> load -> view('index', array(
-				"categories" => $categories,
 				"blogs" => $blogs
 		));
 	}
-	public function get_blogs(){
 
-		$cate_id = $this -> input -> get('cateId');
-		if(!$cate_id){
-			$blogs = $this -> blog_model -> get_all();
-		}else{
-			$blogs = $this -> blog_model -> get_by_category($cate_id);
-		}
-		echo json_encode($blogs);
-	}
 
 	public function view_blog(){
 		$blog_id = $this -> input -> get('blogId');
@@ -76,16 +48,32 @@ class Welcome extends CI_Controller {
 	}
 
 	public function list_blog(){
-    $blogs = $this ->blog_model ->get_all();
-		$this ->load -> view('blog_list', array(
-	      'blogs' => $blogs
+		$cate_id = $this -> input -> get('cateId');
+		if( !$cate_id ){
+	    	$blogs = $this -> blog_model -> get_all();		
+		} else {
+			$blogs = $this -> blog_model -> get_by_category($cate_id);
+		}
+		$categories = $this -> blog_category_model -> get_all();
+		$this -> load -> view('blog_list', array(
+			"categories" => $categories,
+	    	'blogs' => $blogs
 	  ));
 	}
 
 	public function get_more(){
 		$offset = $this -> input -> get('offset');
-		$blogs = $this -> blog_model -> get_by_page($offset);
+		$cate_id = $this -> input -> get('liCateId');
+
+		$blogs = $this -> blog_model -> get_by_page($offset, $cate_id);
+		
 		echo json_encode($blogs);
+	}
+
+	public function contact(){
+		$this -> load -> view('contact', array(
+				
+		));
 	}
 
 }

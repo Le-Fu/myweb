@@ -1,44 +1,99 @@
 /*------------------blog-list-----------*/
-#blog-list{
+body {
+    background-color: #fafafa;
+}
+/* blog-box style */
+.blog {
+    margin: 0 50px 20px;
+    padding: 0 20px 0px 20px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+}
+.blog a {
+    color: #000;
+}
+
+/* fontawesome style */
+.blog .fa{
+    color: #56D0B3;
+    font-size: 1.5rem;
+}
+.author {
+    margin-left: 50px;
+}
+
+.res {
+    float: right;
+    margin-right: 20px;
+}
+
+/*img style*/
+.img-hover {
+    max-height: 20rem;
     overflow: hidden;
+    margin-bottom: 10px;
 }
-#blog-list .blog-li{
-    width: 46%;
-    padding: 2% ;
-    float: left;
-}
-
-#blog-list .blog-li img{
+.img-hover img{
     width: 100%;
-    height: 25rem;
 }
 
-#blog-list a{
+
+/* category - list  */
+.list-group a{
+    color: #000;
     display: inline-block;
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    margin: 0.5rem;
-    color: #ffffff;
-    background-color: #279f7c;
+    width: 100%;
 }
-#blog-list a:hover{
-    background-color: #7aa;
+.list-group .active a {
+    color: #fff;
+}
+.list-group-item:hover {
+    background-color: #56D0B3;
+    transition: all .5s ease-in;
+}
+.list-group-item:hover a{
+    color: #fff;
+}
+.list-group .active{
+    background-color: #56D0B3;
+    border: 1px solid #ccc;
+}
+.list-group .active:hover {
+    background-color: #56D8B3;
 }
 
-.load-more{
-    text-align: center;
-    padding-bottom: 1rem;
+
+
+.loadmore {
+    position: relative;
+    width: 100%;
+    height: 50px;
 }
-.load-more button{
-    border: 1px solid white;
+#btn-more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 20px;
     border-radius: 8px;
-    padding: 1rem 2rem;
-    margin: 0.5rem;
-    color: #ffffff;
-    background-color: #279f7c;
+    border: 1px solid #fff;
+    background-color: #56D0B3;
+    color: #fff;
 }
-.load-more button:hover{
-    cursor: pointer;
-    background-color: #7aa;
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 980px) {
+    .blog {
+        margin: 0 0 20px 0;
+    }
 }
