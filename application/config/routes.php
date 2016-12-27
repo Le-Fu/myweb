@@ -40,11 +40,13 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['admin'] = 'admin/welcome/login';
-$route['admin/login'] = 'admin/welcome/login';
-$route['admin/do_login'] = 'admin/welcome/do_login';
-$route['admin/index'] = 'admin/welcome/index';
-$route['blog_list'] = 'welcome/list_blog';
+$route['adminssm521'] = 'adminssm521/welcome/login';
+$route['adminssm521/blog/(:num)'] = 'adminssm521/welcome/mgr_blog/$1';
+$route['adminssm521/blog/(:num)/(:num)'] = 'adminssm521/welcome/mgr_blog/$1/$2';
+$route['adminssm521/(:any)'] = 'adminssm521/welcome/$1';
+$route['adminssm521/category'] = 'adminssm521/welcome/mgr_category';
+$route['adminssm521/blog'] = 'adminssm521/welcome/mgr_blog';
+$route['adminssm521/comment'] = 'adminssm521/welcome/mgr_comment';
 
 
 

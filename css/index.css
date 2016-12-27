@@ -12,7 +12,56 @@ footer {
 	text-align: center;
 	color: #fff;
 }
-
+#page1 .welcome-message a {
+	color: #fff;
+	text-decoration: none;
+}
+#page1 .welcome-message span a:before{
+    content: '[';
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+#page1 .welcome-message span a:after{
+    content: ']';
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+#page1 .welcome-message span:hover a:before{
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+    opacity: 1;
+}
+#page1 .welcome-message span:hover a:after{
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 1;
+}
 #page1 .welcome-message {
 	padding-top: 20%;
 }
@@ -84,6 +133,31 @@ footer {
 	display: none;
 }
 
+
+.carousel-inner .item a h3:after{
+    content: '-->';
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.carousel-inner .item a:hover h3:after{
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    opacity: 1;
+}
 
 /*------------------------- page3-css------------------------------ */
 #page3 {
@@ -172,6 +246,9 @@ footer {
 @media (max-width: 980px) {
     #canvas-board{
         display: none;
+    }
+    .blog-show .caption {
+    	visibility: hidden;
     }
     .to-myblog	{
 		display: block;

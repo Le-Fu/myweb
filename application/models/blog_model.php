@@ -37,5 +37,32 @@ class Blog_model extends CI_Model {
         }
     }
 
+    public function get_all_count($cate_id, $title){
+        $this -> db -> select('blog.*, cate.cate_name');
+        $this -> db -> from('t_blog blog');
+        $this -> db -> join('t_blog_category cate', 'blog.cate_id=cate.cate_id');
+        $this -> db -> where('cate.is_delete', 0);
+        if($cate_id != 0){
+            $this -> db -> where('cate.cate_id', $cate_id);
+        }
+        if($title){
+            $this -> db -> like('blog.title', $title);
+        }
+        return $this->db->count_all_results();
+    }
+
+    public function save($title, $author, $cate_id, $desc, $content, $img, $big_img){
+        $this -> db -> insert('t_blog', array(
+            'title' => $title,
+            'author' => $author,
+            'cate_id' => $cate_id,
+            'desc' => $desc,
+            'content' => $content,
+            'img' => $img,
+            'big_img' => $big_img
+        ));
+        return $this -> db -> affected_rows();
+    }
+
 
 }

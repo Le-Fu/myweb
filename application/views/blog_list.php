@@ -1,3 +1,13 @@
+<!-- 
+ ________  ________  ________  ________  ___  _________    ___    ___ 
+|\   __  \|\   __  \|\   __  \|\   ____\|\  \|\___   ___\ |\  \  /  /|
+\ \  \|\  \ \  \|\  \ \  \|\  \ \  \___|\ \  \|___ \  \_| \ \  \/  / /
+ \ \  \\\  \ \   ____\ \   __  \ \  \    \ \  \   \ \  \   \ \    / / 
+  \ \  \\\  \ \  \___|\ \  \ \  \ \  \____\ \  \   \ \  \   \/  /  /  
+   \ \_______\ \__\    \ \__\ \__\ \_______\ \__\   \ \__\__/  / /    
+    \|_______|\|__|     \|__|\|__|\|_______|\|__|    \|__|\___/ /     
+                                                         \|___|/    
+ -->
 <?php 
     $cate_id = $this -> input -> get('cateId');
  ?>
@@ -17,8 +27,11 @@
             window.scrollTo(0, 1);
         }
     </script>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+
+    
+    <link rel="shortcut icon" type="favicon.ico" href="img/opacity_favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/blog-list.css">
 </head>
@@ -35,7 +48,7 @@
                             <h2 class="blog-title"><?php echo $blog -> title; ?></h2>
                             <h5>
                                 <i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;
-                                <span><?php echo $blog -> post_time; ?></span>
+                                <span><?php echo date('Y-m-d', strtotime($blog -> post_time)) ; ?></span>
                                 <span class="author">Author:</span>&nbsp;
                                 <span><?php echo $blog -> author; ?></span>
                             </h5>
@@ -71,7 +84,7 @@
 
 
 
-        <div class="col-md-4">
+        <div class="col-md-4 sidebar">
             <h2>Category</h2>
             <hr>
             <ul class="list-group">

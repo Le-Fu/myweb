@@ -68,7 +68,7 @@ $title = $this -> input -> get('title');
                     </div>
                 </div>
                 <div class="am-u-sm-12 am-u-md-3">
-                    <form action="admin/blog/<?php echo $cate_id;?>" method="get">
+                    <form action="adminssm521/blog/<?php echo $cate_id;?>" method="get">
                         <div class="am-input-group am-input-group-sm">
                             <input type="text" class="am-form-field" name="title" value="<?php echo $title;?>">
                             <span class="am-input-group-btn">
@@ -96,9 +96,9 @@ $title = $this -> input -> get('title');
                                     <td><input type="checkbox" value="<?php echo $blog->blog_id;?>"/></td>
                                     <td><?php echo $blog->blog_id;?></td>
                                     <td><a href="#"><?php echo $blog->title;?></a></td>
-                                    <td><?php echo $blog->cate_name;?></td>
-                                    <td class="am-hide-sm-only"><?php echo $blog->clicked;?></td>
-                                    <td class="am-hide-sm-only"><?php echo $blog->post_date;?></td>
+                                    <td><?php echo $blog->cate_id;?></td>
+                                    <td class="am-hide-sm-only"><?php echo $blog->click;?></td>
+                                    <td class="am-hide-sm-only"><?php echo $blog->post_time;?></td>
                                     <td>
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
@@ -157,11 +157,11 @@ $title = $this -> input -> get('title');
             var $selected = $options.eq(this.selectedIndex);
             var selectedId = $selected.val();
 
-            location.href = 'admin/blog/'+selectedId+'?title=<?php echo $title;?>';
+            location.href = 'adminssm521/blog/'+selectedId+'?title=<?php echo $title;?>';
         });
 
         $('#btn-add').on('click', function(){
-            location.href = 'admin/add_blog';
+            location.href = 'adminssm521/add_blog';
         });
     });
 </script>

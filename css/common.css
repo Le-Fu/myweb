@@ -43,6 +43,7 @@ html {
 	font-family: Georgia, serif;
 }
 .navbar {
+	border-radius: 0;
 	text-align: center;
 	padding: 1.5rem 0;
 	/*border-bottom: 1px solid #eee;*/

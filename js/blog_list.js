@@ -1,12 +1,26 @@
 requirejs.config({
+    //To get timely, correct error triggers in IE, force a define/shim exports check.
+    paths: {
+        'jquery': [
+            'https://cdn.bootcss.com/jquery/3.1.1/jquery.min',
+            'jquery'
+        ],
+        'bootstrap': [
+             'https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min',
+             'bootstrap.min'
+        ],
+    },
     shim: {
-        'bootstrap.min': {
+        'bootstrap': {
             deps: ['jquery'],
             exports: 'jQuery.fn.bootstrap'
         }
     },
+
+    
 });
-require([ 'jquery', 'weixin', 'bootstrap.min', 'goTop' ], function($){
+
+require([ 'jquery', 'weixin', 'bootstrap', 'goTop' ], function($){
   $(function(){
     var myOffset = 0;
     var $btnMore = $('#btn-more');

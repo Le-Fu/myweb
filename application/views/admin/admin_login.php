@@ -36,7 +36,7 @@
 </div>
 <div class="am-g">
   <div class="am-u-lg-4 am-u-md-8 am-u-sm-centered">
-    <form method="post" class="am-form" action="admin/do_login">
+    <form method="post" class="am-form" action="adminssm521/do_login">
       <label for="admin-name">用户名:</label>
       <input type="text" name="admin-name" id="admin-name" value="">
       <br>

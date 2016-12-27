@@ -1,8 +1,18 @@
+<!-- 
+ ________  ________  ________  ________  ___  _________    ___    ___ 
+|\   __  \|\   __  \|\   __  \|\   ____\|\  \|\___   ___\ |\  \  /  /|
+\ \  \|\  \ \  \|\  \ \  \|\  \ \  \___|\ \  \|___ \  \_| \ \  \/  / /
+ \ \  \\\  \ \   ____\ \   __  \ \  \    \ \  \   \ \  \   \ \    / / 
+  \ \  \\\  \ \  \___|\ \  \ \  \ \  \____\ \  \   \ \  \   \/  /  /  
+   \ \_______\ \__\    \ \__\ \__\ \_______\ \__\   \ \__\__/  / /    
+    \|_______|\|__|     \|__|\|__|\|_______|\|__|    \|__|\___/ /     
+                                                         \|___|/    
+ -->
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>Index</title>
     <base href="<?php echo site_url();?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="keywords" content=""/> -->
@@ -14,9 +24,10 @@
             window.scrollTo(0, 1);
         }
     </script>
-
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="shortcut icon" type="favicon.ico" href="img/opacity_favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -31,9 +42,9 @@
                     <div class="col-md-6">
                         <div class="welcome-message">
                             <h1>Less is more.</h1>
-                            <h3>Welcome ! I'm so happy that you come here . As a web developer , I'd like to pursue nice design and enjoy coding .</h3>
+                            <h3>Welcome! I'm so happy that you come here. As a web developer, I'd like to pursue nice design and enjoy coding. </h3>
                             <br>
-                            <div>Konw more about me</div>
+                            <span><a href="#lastPage">Konw more about me</a></span>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -61,7 +72,7 @@
                             <a href="welcome/list_blog">
                                 <h2 class="caption">My recent blogs</h2>
                             </a>
-                            <h3 class="to-myblog"><a href="">click and read more of my blog!</a></h3>
+                            <h3 class="to-myblog"><a href="welcome/list_blog">click and read more of my blog!</a></h3>
                             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
                               <!-- Indicators -->
                                 <ol class="carousel-indicators">
@@ -109,7 +120,7 @@
             <div class="container">
                 <div id="projects">
                     <div class="project-caption">
-                        <h3>New Projects</h3>
+                        <h3>Latest works</h3>
                     </div>
                     <div class="project-row">
                         <div class="project">
@@ -140,7 +151,7 @@
                             </div>
                             <div class="desc-box">
                                 <h4 class="title">H5页面</h4>
-                                <p class="desc">这是给一家珠宝公司做的H5宣传页。</>
+                                <p class="desc">这是给一家礼品公司做的H5宣传页。</>
                             </div>
                             <br>
                             <a href=""><div class="view-project">view detail</div></a>

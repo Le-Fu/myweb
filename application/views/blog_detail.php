@@ -1,8 +1,18 @@
+<!-- 
+ ________  ________  ________  ________  ___  _________    ___    ___ 
+|\   __  \|\   __  \|\   __  \|\   ____\|\  \|\___   ___\ |\  \  /  /|
+\ \  \|\  \ \  \|\  \ \  \|\  \ \  \___|\ \  \|___ \  \_| \ \  \/  / /
+ \ \  \\\  \ \   ____\ \   __  \ \  \    \ \  \   \ \  \   \ \    / / 
+  \ \  \\\  \ \  \___|\ \  \ \  \ \  \____\ \  \   \ \  \   \/  /  /  
+   \ \_______\ \__\    \ \__\ \__\ \_______\ \__\   \ \__\__/  / /    
+    \|_______|\|__|     \|__|\|__|\|_______|\|__|    \|__|\___/ /     
+                                                         \|___|/    
+ -->
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>Blog</title>
     <base href="<?php echo site_url();?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="My Skills Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -15,10 +25,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             window.scrollTo(0, 1);
         }
     </script>
-
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.9.0/styles/monokai-sublime.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="shortcut icon" type="favicon.ico" href="img/opacity_favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.9.0/styles/magula.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/blog_detail.css">
 </head>
@@ -29,27 +40,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="wrap">
 
             <div class="title-zoom">
-                        <h1 class="title"> <?php echo $blog -> title;?> </h1>
-                        <h4 class="author-name">Author: <?php echo $blog -> author;?> </h4>
+                <h1 class="title"> <?php echo $blog -> title;?> </h1>
+                <h4 class="author-name">Author: <?php echo $blog -> author;?> </h4>
             </div>
 
         
-            <div id="preview"><div class="content"><?php echo $blog->content;?></div></div>
-                
+            <div id="preview"><div class="content" style="display: none;"><?php echo $blog->content;?></div></div>
 
                 
             <ul class="article-info">
-                <li class="date">
-                    <i class="fa fa-calendar-check-o flag" aria-hidden="true"></i>&nbsp;
-                    <?php echo $blog->post_time;?>
+                <li class="clicked">
+                    <i class="fa fa-heart flag" aria-hidden="true"></i>&nbsp;
+                    <?php echo $blog->click;?>
                 </li>
                 <li class="category">
                     <i class="fa fa-tag flag" aria-hidden="true"></i>&nbsp;
                     <?php echo $blog->cate_name;?>
                 </li>
-                <li class="clicked">
-                    <i class="fa fa-heart flag" aria-hidden="true"></i>&nbsp;
-                    <?php echo $blog->click;?>
+                <li class="date">
+                    <i class="fa fa-calendar-check-o flag" aria-hidden="true"></i>&nbsp;
+                    <?php echo date('Y-m-d', strtotime($blog -> post_time));?>
                 </li>
             </ul>
         </div>
@@ -68,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li class="comment">
                         <ul class="comment-info">
                             <li><i class="fa fa-user flag" aria-hidden="true"></i>&nbsp;<?php echo $comment->username;?></li>
-                            <li><i class="fa fa-calendar-o flag" aria-hidden="true"></i>&nbsp;<?php echo $comment->comment_date;?></li>
+                            <li><i class="fa fa-calendar-o flag" aria-hidden="true"></i>&nbsp;<?php echo date('Y-m-d', strtotime($comment->comment_date));?></li>
                         </ul>
                         <p class="content"><?php echo $comment->message;?></p>
                     </li>
@@ -92,28 +102,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     
     <a id="go-top" href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     <?php include 'footer.php' ;?>
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
     <script src="https://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
-    <script type="text/javascript">
-        var myblog = new marked.Renderer();
-        marked.setOptions({
-            renderer: myblog,
-            gfm: true,
-            tables: true,
-            breaks: true,//回车换成br
-            pedantic: false,
-            sanitize: true,
-            smartLists: true,
-            smartypants: false
+    <script>
+        $(function(){
+              //markdown
+            var myblog = new marked.Renderer();
+            marked.setOptions({
+                renderer: myblog,
+                gfm: true,
+                tables: true,
+                breaks: true,//回车换成br
+                pedantic: false,
+                sanitize: true,
+                smartLists: true,
+                smartypants: false
+            });
+
+            var $container = $('#preview');
+            var $content = $container.text();
+            var $preview = marked($content);
+            hljs.initHighlightingOnLoad();
+            $container.append($preview);
+            
         });
 
-        var $container = $('#preview');
-        var $content = $container.text();
-        $container.empty();
-        var $preview = marked($content);
-        hljs.initHighlightingOnLoad();
-        $container.append($preview);
     </script>
     <script src="js/require.js" data-main="js/blog_detail"></script>
 </body>

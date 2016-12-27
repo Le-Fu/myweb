@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="assets/css/admin.css">
 </head>
 <body>
-
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]-->
 
 <?php include 'admin_header.php'; ?>
 
@@ -37,7 +40,7 @@
             </div>
 
             <hr>
-            <form class="am-form" action="admin/post_blog" method="post" enctype="multipart/form-data">
+            <form class="am-form" action="adminssm521/post_blog" method="post" enctype="multipart/form-data">
 
                 <div class="am-tabs am-margin" data-am-tabs>
                     <ul class="am-tabs-nav am-nav am-nav-tabs">
@@ -53,6 +56,16 @@
                                 </div>
                                 <div class="am-u-sm-8 am-u-md-4">
                                     <input type="text" class="am-input-sm" name="title">
+                                </div>
+                                <div class="am-hide-sm-only am-u-md-6">*必填，不可重复</div>
+                            </div>
+
+                             <div class="am-g am-margin-top">
+                                <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                                    文章作者
+                                </div>
+                                <div class="am-u-sm-8 am-u-md-4">
+                                    <input type="text" class="am-input-sm" name="author">
                                 </div>
                                 <div class="am-hide-sm-only am-u-md-6">*必填，不可重复</div>
                             </div>
@@ -81,12 +94,12 @@
 
                             <div class="am-g am-margin-top">
                                 <div class="am-u-sm-4 am-u-md-2 am-text-right">
-                                    点击率
+                                    文章描述
                                 </div>
                                 <div class="am-u-sm-8 am-u-md-4">
-                                    <input type="text" class="am-input-sm" name="clicked">
+                                    <input type="text" class="am-input-sm" name="desc">
                                 </div>
-                                <div class="am-hide-sm-only am-u-md-6">选填</div>
+                                <div class="am-hide-sm-only am-u-md-6">*必填，不可重复</div>
                             </div>
 
                             <div class="am-g am-margin-top">

@@ -1,13 +1,31 @@
 requirejs.config({
+    //To get timely, correct error triggers in IE, force a define/shim exports check.
+    paths: {
+        'jquery': [
+            'https://cdn.bootcss.com/jquery/3.1.1/jquery.min',
+            'jquery'
+        ],
+        'bootstrap': [
+             'https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min',
+             'bootstrap.min'
+        ],
+    },
     shim: {
-        'bootstrap.min': {
+        'bootstrap': {
             deps: ['jquery'],
             exports: 'jQuery.fn.bootstrap'
+        },
+        'marked': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.marked'
         }
     },
+
+    
 });
-require([ 'jquery','bootstrap.min', 'weixin', 'goTop' ], function($) {
+require([ 'jquery', 'bootstrap', 'weixin', 'goTop' ], function($) {
     $(function () {
+
         //检测字数
         $('#message').on('keyup', function(){
             var str = $(this).val();

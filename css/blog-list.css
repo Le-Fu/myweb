@@ -40,6 +40,9 @@ body {
 
 
 /* category - list  */
+.sidebar {
+    padding-right: 50px;
+}
 .list-group a{
     color: #000;
     display: inline-block;

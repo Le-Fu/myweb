@@ -1,3 +1,13 @@
+<!-- 
+ ________  ________  ________  ________  ___  _________    ___    ___ 
+|\   __  \|\   __  \|\   __  \|\   ____\|\  \|\___   ___\ |\  \  /  /|
+\ \  \|\  \ \  \|\  \ \  \|\  \ \  \___|\ \  \|___ \  \_| \ \  \/  / /
+ \ \  \\\  \ \   ____\ \   __  \ \  \    \ \  \   \ \  \   \ \    / / 
+  \ \  \\\  \ \  \___|\ \  \ \  \ \  \____\ \  \   \ \  \   \/  /  /  
+   \ \_______\ \__\    \ \__\ \__\ \_______\ \__\   \ \__\__/  / /    
+    \|_______|\|__|     \|__|\|__|\|_______|\|__|    \|__|\___/ /     
+                                                         \|___|/    
+ -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,8 +24,10 @@
             window.scrollTo(0, 1);
         }
     </script>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="shortcut icon" type="favicon.ico" href="img/opacity_favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
@@ -30,8 +42,11 @@
                         <img src="img/myphoto.png" alt="myphoto">
                   </a>
                   <div class="media-body">
+                    <h1> </h1>
                     <h4 class="media-heading">Self Introduce</h4>
-                    Hey guys! I'm Simon, a designer and programer 
+                    Hey guys! I'm Simon, a designer and programer. Let's make progress together!
+                    
+                    <h4>Just complete the infomation below. I'll receive your email. </h4>
                   </div>
                 </div>
             </div>
@@ -70,23 +85,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php include 'footer.php';?>
 <script src="js/require.js" data-main="js/contact" ></script>

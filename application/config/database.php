@@ -39,8 +39,8 @@
 |							- good for ensuring strict SQL while developing
 |
 | The $active_group variable lets you choose which connection group to
-| make active.  By default there is only one group (the 'default' group).
-|
+| make active.  By default there is only one group (the 'default' group)
+.|
 | The $active_record variables lets you determine whether or not to load
 | the active record class
 */
@@ -48,6 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+/*$db['default']['hostname'] = 'bdm240371460.my3w.com';
+$db['default']['username'] = 'bdm240371460';
+$db['default']['password'] = 'Ssmhkx521';
+$db['default']['database'] = 'bdm240371460_db';*/
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
