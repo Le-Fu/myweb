@@ -19,11 +19,12 @@ class Welcome extends CI_Controller {
 
     public function do_login()
     {
-        $email = $this -> input -> post('email');
-        $pwd = $this -> input -> post('pwd');
-        $row = $this -> admin_model -> get_by_email_pwd($email, $pwd);
-        if($row > 0){
-            echo 'success';
+        $email = $this -> input -> post('admin-name');
+        $pwd = $this -> input -> post('password');
+        $rows = $this -> admin_model -> get_by_email_pwd($email, $pwd);
+
+        if($rows -> id = '1' ){
+            redirect('adminssm521/admin_index');
         }else{
             echo 'fail';
         }

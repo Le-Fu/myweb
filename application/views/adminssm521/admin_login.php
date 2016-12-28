@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
   <style>
     body{
-      background: url(img/login_bg.jpg) no-repeat 0 0;
-      background-size: cover;
       color: #fff;
     }
     .header {
@@ -38,7 +36,7 @@
   <div class="am-u-lg-4 am-u-md-8 am-u-sm-centered">
     <form method="post" class="am-form" action="adminssm521/do_login">
       <label for="admin-name">用户名:</label>
-      <input type="text" name="admin-name" id="admin-name" value="">
+      <input type="email" name="admin-name" id="admin-name" value="">
       <br>
       <label for="password">密码:</label>
       <input type="password" name="password" id="password" value="">
