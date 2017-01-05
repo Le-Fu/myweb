@@ -140,3 +140,10 @@ footer li .fa-twitter-square:hover{
 		padding: 0;
 	}
 }
+
+@media (max-width: 640px) {
+	#go-top {
+		right: 40px;
+		bottom: 40px;
+	}
+}

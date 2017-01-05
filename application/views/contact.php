@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-11">
+            <div class="col-md-10">
                 <div class="media">
                   <a class="media-left" href="javascript:;">
                         <img src="img/myphoto.png" alt="myphoto">
@@ -56,21 +56,21 @@
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="email-addr" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
+                <div class="col-sm-9">
                   <input type="email" class="form-control" id="email-addr" placeholder="Please write your email...">
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="email-name" class="col-sm-2 control-label">Name</label>
-                <div class="col-sm-10">
+                <div class="col-sm-9">
                   <input type="text" class="form-control" id="email-name" placeholder="Please write your name...">
                 </div>
               </div>
             
             <div class="form-group">
                 <label for="email-content" class="col-sm-2 control-label">Content</label>
-                <div class="col-sm-10">
+                <div class="col-sm-9">
                   <textarea id="email-content" class="form-control" rows="3" placeholder="Please write what you want to tell me..."></textarea>
                   
                 </div>

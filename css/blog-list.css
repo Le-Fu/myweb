@@ -99,4 +99,12 @@ body {
     .blog {
         margin: 0 0 20px 0;
     }
+    .author {
+        margin-left: 20px;
+    }
+
+    .sidebar {
+        display: none;
+    }
 }
+

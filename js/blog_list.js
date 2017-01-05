@@ -25,6 +25,7 @@ require([ 'jquery', 'weixin', 'bootstrap', 'goTop' ], function($){
     var myOffset = 0;
     var $btnMore = $('#btn-more');
     var $liCateId = $('.active').data('id');
+
     $btnMore.on('click', function(){
       $btnMore.hide();
       $.get('welcome/get_more',{
@@ -44,7 +45,7 @@ require([ 'jquery', 'weixin', 'bootstrap', 'goTop' ], function($){
                             <h2 class="blog-title">`+ blog.title +`</h2>
                             <h5>
                                 <i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;
-                                <span>`+ blog.post_time +`</span>
+                                <span>`+ blog.post_time.split(' ')[0] +`</span>
                                 <span class="author">Author:</span>&nbsp;
                                 <span>`+ blog.author +`</span>
                             </h5>
