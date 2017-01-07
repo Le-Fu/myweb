@@ -19,7 +19,9 @@ body {
 #article {
     font-size: 1.4rem;
 }
-
+#article img {
+    width: 100%;
+}
 #article .article-info{
     margin-top:2rem;
     border: 1px dashed rgba(0,0,0,0.61);
