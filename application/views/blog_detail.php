@@ -32,6 +32,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/blog_detail.css">
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-89543262-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
 </head>
 <body>
@@ -49,6 +62,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div id="preview"><div class="content" style="display: none;"><?php echo $blog->content;?></div></div>
 
                 
+            
+        </div>
+        </div>
+    </div>
+        <div class="container">
+        <div class="wrap">
             <ul class="article-info">
                 <li class="clicked">
                     <i class="fa fa-heart flag" aria-hidden="true"></i>&nbsp;
@@ -65,8 +84,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
         </div>
         </div>
-    </div>
-
     <div id="article-comment">
         <div class="container">
         <div class="wrap">
@@ -104,9 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <a id="go-top" href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     <?php include 'footer.php' ;?>
 
-    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
-    <script src="https://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js"></script>
+
     <script>
         $(function(){
               //markdown
@@ -122,26 +137,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 smartypants: false
             });
 
-            var $container = $('#preview');
-            var $content = $container.text();
+            var $oContainer = $('#preview');
+            var $content = $oContainer.text();
             var $preview = marked($content);
+            $oContainer.append($preview);
             hljs.initHighlightingOnLoad();
-            $container.append($preview);
                 
             
         });
 
     </script>
     <script src="js/require.js" data-main="js/blog_detail"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-89543262-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 </body>
 </html>

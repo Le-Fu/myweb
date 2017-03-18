@@ -22,13 +22,13 @@ body {
 #article img {
     width: 100%;
 }
-#article .article-info{
+.article-info{
     margin-top:2rem;
     border: 1px dashed rgba(0,0,0,0.61);
     border-right:none;
     border-left:none;
 }
-#article .article-info li{
+.article-info li{
     display: inline-block;
     padding: 2rem 2rem;
 }

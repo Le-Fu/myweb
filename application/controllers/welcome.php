@@ -76,4 +76,10 @@ class Welcome extends CI_Controller {
 		));
 	}
 
+
+	//weixin 
+	public function test(){
+		$this -> load -> view('test', array());
+	}
+
 }
