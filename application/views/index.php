@@ -161,8 +161,8 @@
                                 <img src="img/wellcee.jpg" alt="">
                             </div>
                             <div class="desc-box">
-                                <h4 class="title">京东服务商</h4>
-                                <p class="desc">这是一个黑龙江3000余家商户接入和管理的平台。</>
+                                <h4 class="title">京东服务帮</h4>
+                                <p class="desc">为京东商城第三方入驻卖家提供个性化电子商务产品及服务</>
                             </div>
                             <br>
                             <a href=""><div class="view-project">view detail</div></a>
